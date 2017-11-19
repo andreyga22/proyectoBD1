@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class BaseDatosC {
 
     public BaseDatosC() {
-
+        System.out.println("");
     }
 
     public void añadirClienteRegular() {
