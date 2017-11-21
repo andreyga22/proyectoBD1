@@ -1,6 +1,8 @@
 package Base;
 
+import java.sql.Connection;
 import java.util.ArrayList;
+import java.sql.*;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -13,25 +15,92 @@ import java.util.ArrayList;
  */
 public class BaseDatosC {
 
+    private Connection con;
+
+    public void baseDeDatos() {
+        try {
+            Class.forName("oracle.jdbc.OracleDriver");
+            String BaseDeDatos = "jdbc:oracle:thin:@localhost:1521:XE";
+            con = DriverManager.getConnection(BaseDeDatos, "proyecto", "123queso");
+            if (con != null) {
+                System.out.println("Conexion exitosa a esquema HR");
+            } else {
+                System.out.println("Conexion fallida");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public BaseDatosC() {
         System.out.println("");
     }
 
     public void añadirClienteRegular() {
-
+        
     }
-    
+
     public void añadirClienteEmpresa() {
 
     }
     
-    public void añadirInformacionLaboral() {
-
-    }
-
-    public void añadirCuentas() {
-
-    }
+//    public void añadirClienteExtranjero() {
+//        Statement stmt = con.createStatement();
+//            CallableStatement cStmt = con.prepareCall("{call INSERTARCLIENTEEXTRANJERO(?,?,?,?,?,?,?,?,?,?,?,?,?,?}");
+//
+//            cStmt.setString(1, numid);
+//            cStmt.setInt(2, dirId);
+//            cStmt.setInt(3, codPostal);
+//            cStmt.setString(4, tipoCl);
+//            cStmt.setString(5, nacional);
+//            cStmt.setString(6, vencimiento);
+//            cStmt.setString(7, otras);
+//            cStmt.setString(8, prov);
+//            cStmt.setString(9, dist);
+//            cStmt.setString(10, cant);
+//            cStmt.setInt(11, telefono);
+//            cStmt.setString(12, tipoTel);
+//            cStmt.setString(13, ext);
+//            cStmt.setString(14, email);
+//            
+//            cStmt.execute();
+//            System.out.println("Se insertó la cuenta");
+//
+//            con.close();
+//    }
+//
+//    public void añadirInformacionLaboral() {
+//
+//    }
+//
+//    public void añadirCuentas() {
+//        
+//            Statement stmt = con.createStatement();
+//            CallableStatement cStmt = con.prepareCall("{call INSERTARCUENTA(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+//
+//            cStmt.setString(1, codigo);
+//            cStmt.setString(2, numid);
+//            cStmt.setString(3, moned);
+//            cStmt.setString(4, categoriacred);
+//            cStmt.setString(5, estadocuent);
+//            cStmt.setString(6, nombre);
+//            cStmt.setString(7, coddegmento);
+//            cStmt.setString(8, tipocod);
+//            cStmt.setString(9, diasdespues);
+//            cStmt.setString(10, fechaefectivain);
+//            cStmt.setString(11, fechaefectivafi);
+//            cStmt.setString(12, fechaultimaact);
+//            cStmt.setString(13, ultimafecharea);
+//            cStmt.setString(14, facturamul);
+//            cStmt.setString(15, fecharea);
+//            cStmt.setString(16, ultimafechasus);
+//            cStmt.setString(17, fechacierreter);
+//            
+//            cStmt.execute();
+//            System.out.println("Se insertó la cuenta");
+//
+//            con.close();
+//    }
 
     public void añadirCicloBilling() {
 
