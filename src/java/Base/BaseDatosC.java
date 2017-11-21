@@ -33,7 +33,7 @@ public class BaseDatosC {
     }
 
     public BaseDatosC() {
-
+        System.out.println("");
     }
 
     public void añadirClienteRegular() {
