@@ -549,13 +549,6 @@
 
 
         %>
-        <form action="Creartojava.jsp" id="formbarra">
-            <input type = "hidden" name="parametro" value = "ClienteEmpresa"/>
-
-
-
-            <input type="submit" value="Crear" id="boton">
-        </form>
-
+       
     </body>
 </html>
