@@ -23,9 +23,9 @@
             Contraseña:<br>
             <input type="text" name="pass"><BR><BR>
 
-            <input type="radio" name="gender" value="2" checked> Administrador<br>
-            <input type="radio" name="gender" value="1"> Vendedor<br>
-            <input type="radio" name="gender" value="3"> Creador de usuarios<BR><BR>
+            <input type="radio" name="gender" value="admin" checked> Administrador<br>
+            <input type="radio" name="gender" value="vendedor"> Vendedor<br>
+            <input type="radio" name="gender" value="superusuario"> Creador de usuarios<BR><BR>
             <input type="submit" value="Crear" id="boton">
         </form>
  <img src="imagenes/copy.png" alt="imagen" id="copy">

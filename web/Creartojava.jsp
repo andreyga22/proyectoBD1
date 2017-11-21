@@ -1,3 +1,5 @@
+<%@page import="Objetos.ClienteExtranjero"%>
+<%@page import="Objetos.Cuenta"%>
 <%@page import="Base.BaseDatosC"%>
 <%
 
@@ -24,7 +26,10 @@
         String fecharea = request.getParameter("fecharea");
         String ultimafechasus = request.getParameter("ultimafechasus");
         String fechacierreter = request.getParameter("fechacierreter");
+        
+        Cuenta cuenta = new Cuenta(codigo, numid, moned, categoriacred, estadocuent, nombre, coddegmento, tipocod, diasdespues, fechaefectivain, fechaefectivafi, fechaultimaact, ultimafecharea, facturamul, fecharea, ultimafechasus, fechacierreter);
 
+        new BaseDatosC().añadirCuentas(cuenta);
     }
     if (parametro.equals("CicloBilling")) {
 
@@ -34,7 +39,7 @@
         String TiempoCi = request.getParameter("TiempoCi");
         String CodigoEstatusCi = request.getParameter("CodigoEstatusCi");
         String DescripcionEsta = request.getParameter("DescripcionEsta");
-
+        
     }
 
     if (parametro.equals("ClienteRegular")) {
@@ -67,8 +72,8 @@
     if (parametro.equals("ClienteExtranjer")) {
 
         String numid = request.getParameter("numid");
-        String dirId = request.getParameter("dirId");
-        String codPostal = request.getParameter("codPostal");
+        int dirId = Integer.parseInt(request.getParameter("dirId"));
+        int codPostal = Integer.parseInt(request.getParameter("codPostal"));
         String tipoCl = request.getParameter("tipoCl");
         String nacional = request.getParameter("nacional");
         String vencimiento = request.getParameter("vencimiento");
@@ -76,11 +81,14 @@
         String prov = request.getParameter("prov");
         String dist = request.getParameter("dist");
         String cant = request.getParameter("cant");
-        String telefono = request.getParameter("telefono");
+        int telefono = Integer.parseInt(request.getParameter("telefono"));
         String tipoTel = request.getParameter("tipoTel");
         String ext = request.getParameter("ext");
         String email = request.getParameter("email");
+        
+        ClienteExtranjero cliente = new ClienteExtranjero(numid, dirId, codPostal, tipoCl, nacional, vencimiento, otras, prov, dist, cant, telefono, tipoTel, ext, email);
 
+        new BaseDatosC().añadirClienteExtranjero(cliente);
     }
     if (parametro.equals("ClienteEmpresa")) {
 
@@ -189,5 +197,6 @@
 
     }
 
+    response.sendRedirect("Exito.jsp");
 
 %>

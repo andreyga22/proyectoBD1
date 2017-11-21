@@ -32,7 +32,7 @@ base.EliminarPromociones(id);
 base.EliminarContratos(id);
     }
 
-    response.sendRedirect("Eliminar.jsp?parametro="+parametro+""); 
+    response.sendRedirect("Exito.jsp"); 
 
 
 %>

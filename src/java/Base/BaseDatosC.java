@@ -1,5 +1,8 @@
 package Base;
 
+import Objetos.ClienteExtranjero;
+import Objetos.Cuenta;
+import Objetos.Usuario;
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.sql.*;
@@ -39,12 +42,13 @@ public class BaseDatosC {
     public void añadirClienteRegular() {
         
     }
+    
 
     public void añadirClienteEmpresa() {
 
     }
     
-//    public void añadirClienteExtranjero() {
+//    public void añadirClienteExtranjero(ClienteExtranjero cliente) {
 //        Statement stmt = con.createStatement();
 //            CallableStatement cStmt = con.prepareCall("{call INSERTARCLIENTEEXTRANJERO(?,?,?,?,?,?,?,?,?,?,?,?,?,?}");
 //
@@ -68,12 +72,12 @@ public class BaseDatosC {
 //
 //            con.close();
 //    }
-//
-//    public void añadirInformacionLaboral() {
-//
-//    }
-//
-//    public void añadirCuentas() {
+
+    public void añadirInformacionLaboral() {
+
+    }
+
+//    public void añadirCuentas(Cuenta cuenta) {
 //        
 //            Statement stmt = con.createStatement();
 //            CallableStatement cStmt = con.prepareCall("{call INSERTARCUENTA(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
@@ -102,6 +106,14 @@ public class BaseDatosC {
 //            con.close();
 //    }
 
+    public void añadirUsuario(Usuario user) {
+
+    }
+    
+    public String regresarUsuarioRol(String User,String Pass){
+        return "";
+    }
+    
     public void añadirCicloBilling() {
 
     }

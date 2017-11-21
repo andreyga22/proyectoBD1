@@ -20,7 +20,7 @@
                 if (parametro.equals("Cuentas")) {
             %>
 
-        <form action="Creartojava.jsp" id="formbarra">
+        <form action="Creartojava.jsp" >
             <input type = "hidden" name="parametro" value = "Cuentas"/>
 
             codigo:<br>
@@ -83,7 +83,7 @@
             if (parametro.equals("Planes")) {
         %>
 
-        <form action="Creartojava.jsp" id="formbarra">
+        <form action="Creartojava.jsp" >
             <input type = "hidden" name="parametro" value = "Planes"/>
 
             CodigoPla:<br>
@@ -137,7 +137,7 @@
             if (parametro.equals("Servicios")) {
         %>
 
-        <form action="Creartojava.jsp" id="formbarra">
+        <form action="Creartojava.jsp" >
             <input type = "hidden" name="parametro" value = "Servicios"/>
 
 
@@ -154,7 +154,7 @@
             <input type="submit" value="Crear" id="boton">
         </form>
 
-        <form action="Creartojava.jsp" id="formbarra">
+        <form action="Creartojava.jsp">
             <input type = "hidden" name="parametro" value = "CicloBilling"/>
 
             CodigoCi:<br>
@@ -184,7 +184,7 @@
             if (parametro.equals("Productos")) {
         %>
 
-        <form action="Creartojava.jsp" id="formbarra">
+        <form action="Creartojava.jsp">
             <input type = "hidden" name="parametro" value = "Productos"/>
 
             codProducto:<br>
@@ -226,7 +226,7 @@
             if (parametro.equals("Campanas")) {
         %>
 
-        <form action="Creartojava.jsp" id="formbarra">
+        <form action="Creartojava.jsp">
             <input type = "hidden" name="parametro" value = "Campanas"/>
 
             CodigoCampaña:<br>
@@ -268,7 +268,7 @@
             if (parametro.equals("Promociones")) {
         %>
 
-        <form action="Creartojava.jsp" id="formbarra">
+        <form action="Creartojava.jsp">
             <input type = "hidden" name="parametro" value = "Promociones"/>
 
             codPromocion:<br>
@@ -301,7 +301,7 @@
             if (parametro.equals("Contratos")) {
         %>
 
-        <form action="Creartojava.jsp" id="formbarra">
+        <form action="Creartojava.jsp">
             <input type = "hidden" name="parametro" value = "Contratos"/>
 
             numcontrato:<br>
@@ -364,9 +364,10 @@
 
             if (parametro.equals("Clientes")) {
         %>
-
-
-        <form action="Creartojava.jsp" id="formbarra">
+<br>
+<h1 id="titulo">Cliente Nacional</h1>
+<br>
+        <form action="Creartojava.jsp">
             <input type = "hidden" name="parametro" value = "ClienteRegular"/>
 
             numid:<br>
@@ -441,9 +442,10 @@
 
             <input type="submit" value="Crear" id="boton">
         </form>
-
-
-        <form action="Creartojava.jsp" id="formbarra">
+<br><br>
+<h1 id="titulo">Cliente Empresa</h1>
+<br>
+        <form action="Creartojava.jsp">
             <input type = "hidden" name="parametro" value = "ClienteEmpresa"/>
 
             Identificacion:<br>
@@ -492,9 +494,10 @@
             <input type="submit" value="Crear" id="boton">
         </form>
 
-
-
-        <form action="Creartojava.jsp" id="formbarra">
+<br><br>
+<h1 id="titulo">Cliente Extranjero</h1>
+<br>
+        <form action="Creartojava.jsp">
             <input type = "hidden" name="parametro" value = "ClienteExtranjer"/>
 
             numid:<br>
